@@ -1,4 +1,4 @@
-package edu.colostate.cs414c.model;
+package edu.colostate.cs.cs414c.model;
 
 public abstract class Item {
 	
@@ -7,6 +7,9 @@ public abstract class Item {
 	private String name;
 	private float price;
 	private ItemStatus status;
+	
+	private String[] listOfToppings;
+	private String base;
 	
 	enum ItemStatus {
 		startedPreparation,
@@ -40,6 +43,22 @@ public abstract class Item {
 	
 	public float getPrice(){
 		return this.price;
+	}
+	
+	public void setListOfToppings(String[] listOfToppings){
+		this.listOfToppings = listOfToppings;
+	}
+	
+	public String[] getListOfToppings(){
+		return this.listOfToppings;
+	}
+	
+	public void setBase(String base){
+		this.base = base;
+	}
+	
+	public String getBase(){
+		return base;
 	}
 	
 	public void setStatus(ItemStatus status){

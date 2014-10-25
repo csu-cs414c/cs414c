@@ -1,4 +1,4 @@
-package edu.colostate.cs414c.model;
+package edu.colostate.cs.cs414c.model;
 
 /*
  * To change this template, choose Tools | Templates
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class PizzaStore {
 	
-	private String name = "Pizza Place";
+	/*private String name = "Pizza Place";
 	private String address = "CSU";
 	private ArrayList<EmployeeDetails> employeesList = new ArrayList<EmployeeDetails>();
 	private static PizzaStore pizzastore = new PizzaStore();
@@ -62,7 +62,7 @@ public class PizzaStore {
 		return pizzastore;
 	}
 
-	public ArrayList<EmployeeDetails> getEmployeesList() {
+	public ArrayList> getEmployeesList() {
 		return employeesList;
 	}
 
@@ -85,7 +85,7 @@ public class PizzaStore {
 			}
 		}
 		return "none";
-	}
+	}*/
 	
 }
 
