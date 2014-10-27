@@ -2,13 +2,13 @@ package edu.colostate.cs414c.controller;
 
 
 import edu.colostate.cs414c.view.MenuView;
-import java.awt.CardLayout;
-import java.awt.Container;
+import edu.colostate.cs414c.view.SaleLineItem;
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.LayoutManager;
 import java.awt.Menu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
@@ -19,17 +19,23 @@ import javax.swing.JPanel;
 public class MenuController {
     public MenuView mview;
     private Menu mmodel;
+    public SaleLineItem saleview;
+    public TakeOrderController editmenu;
     
   //JPanel cl = new JPanel();
+    private final JFrame frame ;
+    private final JPanel panel;
 
 
-	public MenuController(){
+	public MenuController() {
 		this.mview = new MenuView();
 		this.mmodel = new Menu();
+                this.frame = mview.getFrame();
+                this.saleview= new SaleLineItem();
                 System.out.println("test");
                
-                //c1 = mview.getCards();
-		this.mview.buttonListener(new MenuController.MenuListener());
+                this.panel = saleview.getPanel();
+                this.mview.buttonListener(new MenuController.MenuListener());
 	}
         
        class MenuListener implements ActionListener{
@@ -37,26 +43,26 @@ public class MenuController {
 		@Override
 		public void actionPerformed(ActionEvent e) {                    
                   if(e.getSource() == mview.getPlaceOrder())    {
-
-                      Container c1 = new JPanel((LayoutManager) mview.getCards()); 
-                 
-                    //c1.(mview.getCards(), "Panel 2");
-                    CardLayout c2 = (CardLayout) c1.getLayout();
-                     System.out.println("inside card");
-                        
-                      
-
-               c2.show(c1,"Panel 2");
-                c2.next(c1);
-                }
+                      frame.add(panel, BorderLayout.CENTER);
+                     // panel.setOpaque(true);
+                    frame.setContentPane(panel);
+                    frame.isResizable();
+                    frame.revalidate();
+                    frame.repaint();
+                   // frame.pack();
+                    frame.setLocationRelativeTo(null);
+                    frame.setVisible(true);
+                    //editmenu = new TakeOrderController();
+                   
+                   
+                    
+              }
                   else if(e.getSource() == mview.getExit()) {
                       System.exit(0);
                   }
                              
              }
         
-	
-	
 }
  
  public static void main(String args[])

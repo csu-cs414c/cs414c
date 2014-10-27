@@ -21,12 +21,16 @@ import javax.swing.JTextField;
  */
 public class MenuView extends JPanel {
    JPanel cards = new JPanel(new CardLayout()); 
-   JButton placeorder, exit,additem, removeitem,submit,cancel ;
+           JPanel panel2 = new JPanel();
+   JButton placeorder, exit;
    JLabel title = new JLabel("Pizza House");
    JLabel menu, pizza, drinks, addons;
-   JTextField item = new JTextField(30);
+   
    String name;
-
+   
+   
+JPanel panel1 = new JPanel();
+ JFrame f = new JFrame();
    
     private MenuView(String name) {
            this.name = name;
@@ -34,7 +38,7 @@ public class MenuView extends JPanel {
      }
    
    public MenuView()    {
-        JFrame f = new JFrame();
+       
 	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(600,700);
         f.setTitle("VIEW MENU");
@@ -51,7 +55,7 @@ public class MenuView extends JPanel {
         //panel.setLayout(new GridLayout(0,1));
 	//setBounds();
 	
-       JPanel panel1 = new JPanel();  
+       
        panel1.setLayout(new GridLayout(8,2));
         panel1.add(title,BorderLayout.CENTER);
        String newline = System.getProperty("line.separator");
@@ -70,21 +74,21 @@ public class MenuView extends JPanel {
          panel1.add(exit, BorderLayout.SOUTH);
        
        
-        p1.add(panel1);
-        JPanel panel2 = new JPanel();
-        addContents(panel2);
-        p2.add(panel2);
+       // p1.add(panel1);
+
+        
+       // p2.add(panel2);
         
        
         //add cards
         
-        cards.add(p1, p1.toString());
-        cards.add(p2, p2.toString());
+        //cards.add(p1, p1.toString());
+       // cards.add(p2, p2.toString());
         
         //getContentPane().add(cards); 
         setVisible(true); 
            
-        f.add(cards, BorderLayout.CENTER);
+        f.add(panel1, BorderLayout.CENTER);
         //f.add(control, BorderLayout.SOUTH);
         f.pack();
         f.setLocationRelativeTo(null);
@@ -94,18 +98,7 @@ public class MenuView extends JPanel {
         
    }
    
-   private void addContents(JPanel panel2)  {
-       panel2.setLayout(new GridLayout(8,2));
-       panel2.add(item, BorderLayout.PAGE_START);
-       additem = new JButton(" + ");
-       panel2.add(additem, BorderLayout.AFTER_LINE_ENDS);
-       removeitem = new JButton(" - ");
-       panel2.add(removeitem, BorderLayout.AFTER_LINE_ENDS);
-       submit = new JButton("submit");
-       panel2.add(submit, BorderLayout.PAGE_END);
-       cancel =new JButton("cancel");
-       panel2.add(cancel, BorderLayout.PAGE_END);
-   }
+  
    
   
   public void buttonListener(ActionListener l)
@@ -113,7 +106,7 @@ public class MenuView extends JPanel {
      
       placeorder.addActionListener(l);
         exit.addActionListener(l);
-        item.addActionListener(l);
+        //item.addActionListener(l);
   }
         
    
@@ -133,6 +126,20 @@ public class MenuView extends JPanel {
         return name;
     }
 
+    private void calculate_cost() {
+        
+    }
+    
+    public JPanel getPanel() {
+		return panel2;
+	}
+
+    public JFrame getFrame()    {
+        return f;
+    }
+public static void main(String args[]){
+    new MenuView();
+}
 
 
   
