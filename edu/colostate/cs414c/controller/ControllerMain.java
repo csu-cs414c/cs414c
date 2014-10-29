@@ -1,16 +1,14 @@
-package Card;
+package edu.colostate.cs.cs414c.controller;
 
 import java.awt.EventQueue;
 
+import edu.colostate.cs.cs414c.view.ViewMain;
+
 public class ControllerMain {	
 	
-	public ControllerMain() {		
+	public ControllerMain() {
 		ViewMain objviewmain = new ViewMain();
-		new ControllerPayment(objviewmain.getviewpayment());
-		ControllerCashPayment objccp = new ControllerCashPayment(objviewmain, objviewmain.getviewcashpayment());
-		objccp.setControllerCashPayment(100);
-		new ControllerCardPayment(objviewmain.getviewcardpayment());
-		new ControllerPaymentSuccess();
+		new ControllerAddSaleLineItem(objviewmain);
 		
 	}
 	
@@ -21,7 +19,7 @@ public class ControllerMain {
              public void run() {             	
                 new ControllerMain();
              }
-         });                
+         });                 
          
     }
 }
