@@ -1,13 +1,17 @@
-package chef;
+package Card;
 
 import java.awt.EventQueue;
 
 public class ControllerMain {	
 	
-	public ControllerMain() {
-		new ControllerChefOrderList();
-		new ControllerChef();
-		new ViewMain();
+	public ControllerMain() {		
+		ViewMain objviewmain = new ViewMain();
+		new ControllerPayment(objviewmain.getviewpayment());
+		ControllerCashPayment objccp = new ControllerCashPayment(objviewmain, objviewmain.getviewcashpayment());
+		objccp.setControllerCashPayment(100);
+		new ControllerCardPayment(objviewmain.getviewcardpayment());
+		new ControllerPaymentSuccess();
+		
 	}
 	
 	public static void main(String args[])
@@ -17,7 +21,7 @@ public class ControllerMain {
              public void run() {             	
                 new ControllerMain();
              }
-         });                 
+         });                
          
     }
 }
