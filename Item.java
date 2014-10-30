@@ -1,57 +1,80 @@
+package edu.colostate.cs.cs414c.model;
+
+import java.util.Set;
+
 public abstract class Item {
 	
 	
-	private int id;
 	private String name;
-	private float price;
-	private ItemStatus status;
+	private Set<String> listOfToppings,listAllToppings;
+	private String base;
 	
-	enum ItemStatus {
-		startedPreparation,
-		finishedPrepatation,
-		delivered
-	}
+	private int userAddedToppings;
+	private String userAddedCrest;
+	private String userAddedSize;
 	
-	public abstract float calculateItemPrice();
-	
-	public Item(){
 		
-	}
+	public abstract float calculateItemPrice();
+	abstract public String[] getListOfItems();
+	abstract public void modifyPrice(String item,float price);
 	
-	public Item(int id, String name,float price){
-		this.id = id;
-		this.name = name;
-		this.price = price;
-	}
-	
-	public void setName(String name){
-		this.name = name;
+		
+	public void setListOfToppings(Set<String> listOfToppings){
+		this.listOfToppings = listOfToppings;
 	}
 	
 	public String getName(){
-		return this.name;
+		return name;
 	}
 	
-	public void setPrice(float price){
-		this.price = price;
+	public Set<String> getListOfToppings(){
+		return this.listOfToppings;
 	}
 	
-	public float getPrice(){
-		return this.price;
+	public void setBase(String base){
+		this.base = base;
 	}
 	
-	public void setStatus(ItemStatus status){
-		if(status.equals(ItemStatus.startedPreparation)){
-			this.status = ItemStatus.startedPreparation;
-		}else if(status.equals(ItemStatus.finishedPrepatation)){
-			this.status = ItemStatus.finishedPrepatation;
-		}else if(status.equals(ItemStatus.delivered)){
-			this.status = ItemStatus.delivered;
-		}
+	public void setAllToppings(Set<String> listAllToppings){
+		this.listAllToppings = listAllToppings;
 	}
 	
-	public ItemStatus getStatus(){
-		return this.status;
+	public Set<String> getAllToppings(){
+		return this.listAllToppings;
 	}
-
+	
+	public String getBase(){
+		return base;
+	}
+	
+		
+	public void setUserAddedToppings(int userAddedToppings){
+		this.userAddedToppings = userAddedToppings;
+	}
+	
+	public int getUserAddedToppings(){
+		return this.userAddedToppings;
+	}
+	
+	public void setUserAddedCrest(String userAddedCrest){
+		this.userAddedCrest = userAddedCrest;
+	}
+	
+	public String getUserAddedCrest(){
+		return this.userAddedCrest;
+	}
+	
+	public void setUserAddedSize(String userAddedSize){
+		this.userAddedSize = userAddedSize;
+	}
+	
+	public String getUserAddedSize(){
+		return this.userAddedSize;
+	}
+	public void setName(String name) {
+		this.name = name;
+		
+	}
+	
+	
 }

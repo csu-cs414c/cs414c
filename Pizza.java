@@ -1,93 +1,71 @@
-package pizzasystem;
+package edu.colostate.cs.cs414c.model;
 
-import java.util.ArrayList;
+import java.util.Set;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+import edu.colostate.cs.cs414c.utils.DbConnection;
 
-/**
- *
- * @author pavithra
- */
-public class Pizza {
-    
-   private String name;
-   private int id;
-   private String desc;
-   private float price;
-   private String size;
-   private String crust;
-   private ArrayList<Topping> toppingslist = new ArrayList<Topping>();
-   
-   public String getName() {
-		return name;
-	}
-	public void setName(String name) {
+public class Pizza extends Item{
+	
+	private String name;
+	private DbConnection db;
+	
+	public Pizza(String name){
 		this.name = name;
+		db = new DbConnection();
+		setListOfToppings(this.getListOfToppings(name));
+		setBase(this.getBase(name));
 	}
-	public int getID() {
-		return id;
-	}
-	public void setID(int id) {
-		this.id = id;
-        }
-   public String getSize() {
-		return size;
-	}
-	public void setSize(String size) {
-		this.size = size;
-	}
-	public String getCrust() {
-		return crust;
-	}
-	public void setCrust(String crust) {
-		this.crust = crust;
-	}
-	public float getCost() {
-		return price;
-	}
-	public void setCost(int price) {
-		this.price = price;
-	}
-        
-        public String getDesc()  {
-            return desc;
-        }
-        
-        public void setDesc(String desc)   {
-            this.desc = desc;
-        }
 	
-	public ArrayList<Topping> getToppings()  {
-            return toppingslist;
-        }
-        
-        public void setToppings(Topping topping)  {
-            toppingslist.add(topping);
-        }
-        
-        public void removeToppings(Topping topping)  {
-            toppingslist.remove(topping);
-        }
-       public float calculatePrice()    {
-           price = db.getBasicPrice(String pizz
-                   a, String size);
-           for(Topping t:toppingslist)  {
-               price = price + t.getPrice();
-           }
-           return price;
-       }
-       
-       
-      
+	public Pizza(){
+		this.name = getCustomizedPizzaName();
+		db = new DbConnection();
+		setAllToppings(this.getAllToppings());
+	}
+
+	@Override
+	public float calculateItemPrice() {
+		
+		float userAddedBasePrice = 0;
+		float userAddedToppingsPrice = db.getPizzaItemsPrice("Toppings") * getUserAddedToppings();
+		if( (db.getPizzaItemsPrice(this.getBase(this.name))) < db.getPizzaItemsPrice(getUserAddedCrest())){
+			userAddedBasePrice = db.getPizzaItemsPrice(getUserAddedCrest()) - db.getPizzaItemsPrice(this.getBase(this.name));
+		}
+		float userAddedSize = db.getPizzaItemsPrice(getUserAddedSize());
+		float getPizzaPrice = db.getPizzaPrice(name);
+		float totalPrice = getPizzaPrice + userAddedSize + userAddedToppingsPrice + userAddedBasePrice;
+		
+		return totalPrice;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public Set<String> getListOfToppings(String pizzaName){
+		return db.getListOfToppins(pizzaName);
+	}
+	
+	public String getBase(String pizzaName){
+		return db.getBase(pizzaName);
+	}
+	
+	public String[] getListOfItems(){
+		Set<String> listOfPizzas = db.getListOfPizzas();
+		return listOfPizzas.toArray(new String[listOfPizzas.size()]);
+	}
+	
+	public Set<String> getAllToppings(){
+		return db.getAllToppings();
+	}
+	
+	public String getCustomizedPizzaName(){
+		return "Customzied Pizza";
+	}
+	
+	@Override
+	public void modifyPrice(String item,float price) {
+		db.modifyPizzaPrice(item, price);
+		
+	}
+
 }
-
-
-	
-
-
-
-
-
