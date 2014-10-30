@@ -1,5 +1,8 @@
-package chef;
+package edu.colostate.cs.cs414c.controller;
 
+import edu.colostate.cs.cs414c.view.ViewChef;
+import edu.colostate.cs.cs414c.view.ViewChefMain;
+import edu.colostate.cs.cs414c.view.ViewMain;
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,16 +14,18 @@ import javax.swing.table.TableRowSorter;
 
 public class ControllerChef {
 	ViewChef objvc;
+	ViewChefMain objviewmain;
 	JTable table;
 	JComboBox<String> ordernoCombo;
 	ControllerChefDataSort model;
 	JToggleButton showMalesButton;
 	JButton buttonback;
 	final RowFilter<ControllerChefDataSort,Integer> orderfilter;
-	 final TableRowSorter<ControllerChefDataSort> sorter;
+	final TableRowSorter<ControllerChefDataSort> sorter;
 	
-	public ControllerChef() {
-		this.objvc = new ViewChef();
+	public ControllerChef(ViewChefMain objviewmain) {
+		this.objviewmain = objviewmain;
+		this.objvc = objviewmain.getViewChef();
 		//objvc.activateListener(new ChefListener());
 		this.table = objvc.getJTable();
 		this.ordernoCombo = objvc.getJComboBox();
@@ -76,7 +81,7 @@ public class ControllerChef {
 	}
 	
 	class ChefActionListener implements ActionListener {
-		ViewMain objviewmain = new ViewMain();
+		//ViewMain objviewmain = new ViewMain();
 		@Override
 		public void actionPerformed(ActionEvent al) {
 			System.out.println("ActionListener 1");

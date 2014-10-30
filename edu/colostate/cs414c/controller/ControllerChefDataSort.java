@@ -1,4 +1,4 @@
-package chef;
+package edu.colostate.cs.cs414c.controller;
 
 import javax.swing.table.DefaultTableModel;
 

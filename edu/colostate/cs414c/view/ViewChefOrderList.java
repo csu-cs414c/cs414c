@@ -1,4 +1,4 @@
-package chef;
+package edu.colostate.cs.cs414c.view;
 
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
