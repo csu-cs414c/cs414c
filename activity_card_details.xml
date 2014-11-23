@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.colostate.cs.cs414c.Activity.CardDetailsActivity" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" >
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/card_number" />
+
+            <EditText
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:inputType="numberSigned"
+                android:maxLength="16"
+                android:scrollHorizontally="false"
+                android:width="@dimen/activity_vertical_margin" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/name_on_card" />
+
+            <EditText 
+                android:gravity="right"
+                android:layout_width ="0dip" 
+    			android:layout_height ="wrap_content" 
+    			android:layout_weight ="1" 
+        		android:inputType="textPersonName"
+        		android:maxLength="100"
+        		android:scrollHorizontally="false"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+               
+                android:text="@string/expiration_date" />
+            
+            <Spinner
+    			android:id="@+id/month"
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:layout_weight ="1" 
+            	android:entries="@array/month"/>
+
+             <Spinner
+    			android:id="@+id/year"
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:layout_weight ="1"  
+			    android:entries="@array/year"/>
+        </TableRow>
+
+        
+        <TableRow>
+
+         <TextView
+                android:text="@string/cvv"/>
+            
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight=".8"
+                android:inputType="numberSigned"
+                android:maxLength="3"
+                android:paddingRight="0dp"
+                android:scrollHorizontally="false"
+                 />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="52dp"
+        android:layout_marginLeft="18dp"
+        android:text="@string/cancel" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignRight="@+id/tableLayout1"
+        android:layout_marginRight="36dp"
+        android:text="@string/next" />
+   
+</RelativeLayout>
