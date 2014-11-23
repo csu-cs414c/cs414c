@@ -2,6 +2,8 @@ package edu.colostate.cs.cs414c.model;
 
 import java.util.Set;
 
+import edu.colostate.cs.cs414c.utils.DbConnection;
+
 public abstract class Item {
 	
 	
@@ -12,6 +14,7 @@ public abstract class Item {
 	private int userAddedToppings;
 	private String userAddedCrest;
 	private String userAddedSize;
+	private static DbConnection db;
 	
 		
 	public abstract float calculateItemPrice();
@@ -76,5 +79,17 @@ public abstract class Item {
 		
 	}
 	
+	public float getPrice()	{
+		return this.getPrice();
+	}
+	/*
+	public static void addItem(Item menuItem,String action) throws SQLException	{
+		db = new DbConnection();
+		db.addItem(menuItem,action);
+	}
+	public static void addItem(Pizza menuItem, String description, String action)	throws SQLException	{
+		db = new DbConnection();
+		db.addItem(menuItem,description,action);
+	}*/
 	
 }
