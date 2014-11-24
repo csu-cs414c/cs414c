@@ -1,0 +1,120 @@
+commit bdc1bd5736a1d9cbe486439916ca6a2eb327983a
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Wed Oct 29 23:58:55 2014 -0600
+
+    prabhu-checkin
+
+commit 1c5395d67cdc9a307d8c6d84bd406ad515464674
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Wed Oct 29 23:39:12 2014 -0600
+
+    Leo Checkin
+
+commit 086a8be5c4cff08e9bae90ac87da426140f8f52c
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 23:34:09 2014 -0600
+
+    document-paviragh
+
+commit 2cdd66314bbaef38ab05653098543c83248d38f6
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 16:59:13 2014 -0600
+
+    sequence paviragh
+
+commit b5e86660c94c7f74f5deae7bbb13235653e5149b
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 16:57:16 2014 -0600
+
+    sequence-paviragh
+
+commit 248c40239e0735b952a42cb0418773f4bf919997
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Wed Oct 29 12:32:14 2014 -0600
+
+    prabhu-payment
+
+commit 3960ed62fa6f53e4d249d23e630f23906b4ef32f
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 01:59:10 2014 -0600
+
+    user-paviragh
+
+commit 39afc4c76bc025aafadfe938f3c6fdf4de430a8a
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Tue Oct 28 18:31:29 2014 -0600
+
+    prabhu-payment revised
+
+commit 6d7576711ae97d6f5d8deb580ab42936ba785a91
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Tue Oct 28 18:27:50 2014 -0600
+
+    prabhu-chef
+
+commit 1db4d09de628eb03eda9067d308362c7b18568ed
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Mon Oct 27 18:02:08 2014 -0600
+
+    diagrams-paviragh
+
+commit 50546ccf33e482928e7cb746e1d7784abed6f672
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Mon Oct 27 17:57:10 2014 -0600
+
+    paviragh-menu
+
+commit 10688917171caabd331bf49d5352f9168c327e0a
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Mon Oct 27 17:52:26 2014 -0600
+
+    leo-db
+
+commit 8a0ba0ee701cfd9a59ca9bcf0ddd82e31a6588ae
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Mon Oct 27 17:47:02 2014 -0600
+
+    leo-selectmenu
+
+commit 3569daf36be112a73ef04b5c016c8b2882ef260a
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Sat Oct 25 16:05:03 2014 -0600
+
+    Leo Model
+
+commit 3625e21fe1a595bd79a07c23780acd08e27f6968
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Sat Oct 25 16:03:00 2014 -0600
+
+    leo-selectmenu
+
+commit d514df54783bc84e149e85eb62fab78c7d35e254
+Merge: f36cc6c b1200f0
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Sat Oct 25 15:54:36 2014 -0600
+
+    Merge branch 'master' of https://github.com/csu-cs414c/cs414c
+
+commit f36cc6c091d406e48a1bca61a3103a084342d4ed
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Sat Oct 25 15:52:50 2014 -0600
+
+    commit package
+
+commit b1200f076bfe839fb952842c63eac9c935fe2804
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Sat Oct 25 15:18:48 2014 -0600
+
+    payment-prabhu
+
+commit 2a4ffba139b640438a048a4fe64d48e83607a8c3
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Sat Oct 25 12:15:13 2014 -0600
+
+    menu-paviragh
+
+commit 777c2d72fd48b7d5bbed249717ead16f0f815bef
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Fri Oct 24 18:20:41 2014 -0600
+
+    login-paviragh

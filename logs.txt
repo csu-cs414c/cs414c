@@ -1,0 +1,282 @@
+commit bdc1bd5736a1d9cbe486439916ca6a2eb327983a
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Wed Oct 29 23:58:55 2014 -0600
+
+    prabhu-checkin
+
+ .../cs414c/controller/ControllerCardPayment.java   | 25 +++++++----
+ .../cs414c/controller/ControllerCashPayment.java   | 29 ++++++++-----
+ .../cs414c/controller/ControllerChef.java          | 15 ++++---
+ .../cs414c/controller/ControllerChefDataSort.java  |  2 +-
+ .../cs414c/controller/ControllerChefOrderList.java | 24 +++++++----
+ .../cs414c/controller/ControllerMain.java          | 20 ++++-----
+ .../cs414c/controller/ControllerPayment.java       | 48 +++++++++++++++++-----
+ .../controller/ControllerPaymentSuccess.java       | 14 ++++---
+ edu/colostate/cs414c/view/ViewChefMain.java        | 48 ++++++++++++++++++++++
+ edu/colostate/cs414c/view/ViewChefOrderList.java   |  2 +-
+ 10 files changed, 163 insertions(+), 64 deletions(-)
+
+commit 1c5395d67cdc9a307d8c6d84bd406ad515464674
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Wed Oct 29 23:39:12 2014 -0600
+
+    Leo Checkin
+
+ AddOn.java                 |  44 ++++++++
+ AddOnView.java             |  89 ++++++++++++++++
+ AddSpecialController.java  | 123 +++++++++++++++++++++
+ AddSpecialView.java        | 150 ++++++++++++++++++++++++++
+ DbConnection.java          | 245 +++++++++++++++++++++++++++++++++++++-----
+ DealOfDayController.java   |  83 ++++++++++++++
+ DealOfDayView.java         | 112 +++++++++++++++++++
+ DealOfTheDay.java          |  35 ++++++
+ Drink.java                 |  50 +++++++++
+ DrinkView.java             | 122 +++++++++++++++++++++
+ Item.java                  |  97 ++++++++++-------
+ Pizza.java                 | 150 +++++++++++---------------
+ PizzaTest.java             | 121 +++++++++++++++++++++
+ PizzaView.java             | 259 ++++++++++++++++++++++++++++++++++++++++++++
+ SelectAddOnController.java |  76 +++++++++++++
+ SelectDrinkController.java | 104 ++++++++++++++++++
+ SelectPizzaController.java | 118 ++++++++++++++++++++
+ mysqlDump.sql              | 261 +++++++++++++++++++++++++++++++++++++++++++++
+ 18 files changed, 2089 insertions(+), 150 deletions(-)
+
+commit 086a8be5c4cff08e9bae90ac87da426140f8f52c
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 23:34:09 2014 -0600
+
+    document-paviragh
+
+ cs414c_document.pdf | Bin 0 -> 414483 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2cdd66314bbaef38ab05653098543c83248d38f6
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 16:59:13 2014 -0600
+
+    sequence paviragh
+
+ PlaceOrder.png | Bin 0 -> 422185 bytes
+ modifymenu.png | Bin 0 -> 260818 bytes
+ paycard.png    | Bin 0 -> 447937 bytes
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b5e86660c94c7f74f5deae7bbb13235653e5149b
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 16:57:16 2014 -0600
+
+    sequence-paviragh
+
+ edu/colostate/cs414c/documents/PlaceOrder.png | Bin 485147 -> 422185 bytes
+ edu/colostate/cs414c/documents/Thumbs.db      | Bin 0 -> 47616 bytes
+ edu/colostate/cs414c/documents/modifymenu.png | Bin 0 -> 260818 bytes
+ edu/colostate/cs414c/documents/paycard.png    | Bin 0 -> 447937 bytes
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 248c40239e0735b952a42cb0418773f4bf919997
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Wed Oct 29 12:32:14 2014 -0600
+
+    prabhu-payment
+
+ .../controller/ControllerAddSaleLineItem.java      | 147 ++++++++++++
+ .../cs414c/controller/ControllerMain.java          |  14 +-
+ .../controller/ControllerSaleLineItemDataSort.java |  27 +++
+ .../cs414c/controller/SelectAddOnController.java   |  60 +++++
+ .../cs414c/controller/SelectDrinkController.java   | 101 ++++++++
+ .../cs414c/controller/SelectPizzaController.java   | 117 ++++++++++
+ edu/colostate/cs414c/view/AddOnView.java           |  88 +++++++
+ edu/colostate/cs414c/view/DrinkView.java           | 122 ++++++++++
+ edu/colostate/cs414c/view/PizzaView.java           | 259 +++++++++++++++++++++
+ edu/colostate/cs414c/view/ViewAddSaleLineItem.java | 115 +++++++++
+ 10 files changed, 1042 insertions(+), 8 deletions(-)
+
+commit 3960ed62fa6f53e4d249d23e630f23906b4ef32f
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Wed Oct 29 01:59:10 2014 -0600
+
+    user-paviragh
+
+ .../cs414c/controller/AddUserController.java       |  80 +++++++++++
+ edu/colostate/cs414c/view/AddUserView.java         | 147 +++++++++++++++++++++
+ edu/colostate/cs414c/view/~$nuView.java            | Bin 0 -> 162 bytes
+ 3 files changed, 227 insertions(+)
+
+commit 39afc4c76bc025aafadfe938f3c6fdf4de430a8a
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Tue Oct 28 18:31:29 2014 -0600
+
+    prabhu-payment revised
+
+ .../cs414c/controller/ControllerCardPayment.java   | 72 ++++++++++++++++++
+ .../cs414c/controller/ControllerCashPayment.java   | 82 +++++++++++++++++++++
+ .../cs414c/controller/ControllerMain.java          | 16 ++--
+ .../cs414c/controller/ControllerPayment.java       | 62 ++++++++++++++++
+ .../controller/ControllerPaymentSuccess.java       | 38 ++++++++++
+ edu/colostate/cs414c/model/ModelCardPayment.java   | 40 ++++++++++
+ edu/colostate/cs414c/model/ModelCashPayment.java   | 27 +++++++
+ edu/colostate/cs414c/model/ModelPayment.java       | 21 ++++++
+ edu/colostate/cs414c/view/ViewCardPayment.java     | 81 ++++++++++++++++++++
+ edu/colostate/cs414c/view/ViewCashPayment.java     | 86 ++++++++++++++++++++++
+ edu/colostate/cs414c/view/ViewMain.java            | 47 +++++++++---
+ edu/colostate/cs414c/view/ViewPayment.java         | 55 ++++++++++++++
+ edu/colostate/cs414c/view/ViewPaymentSuccess.java  | 41 +++++++++++
+ 13 files changed, 652 insertions(+), 16 deletions(-)
+
+commit 6d7576711ae97d6f5d8deb580ab42936ba785a91
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Tue Oct 28 18:27:50 2014 -0600
+
+    prabhu-chef
+
+ .../cs414c/controller/ControllerChef.java          | 93 ++++++++++++++++++++++
+ .../cs414c/controller/ControllerChefDataSort.java  | 27 +++++++
+ .../cs414c/controller/ControllerChefOrderList.java | 34 ++++++++
+ .../cs414c/controller/ControllerMain.java          | 23 ++++++
+ edu/colostate/cs414c/view/ViewChef.java            | 81 +++++++++++++++++++
+ edu/colostate/cs414c/view/ViewChefOrderList.java   | 36 +++++++++
+ edu/colostate/cs414c/view/ViewMain.java            | 42 ++++++++++
+ 7 files changed, 336 insertions(+)
+
+commit 1db4d09de628eb03eda9067d308362c7b18568ed
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Mon Oct 27 18:02:08 2014 -0600
+
+    diagrams-paviragh
+
+ edu/colostate/cs414c/documents/PlaceOrder.png | Bin 0 -> 485147 bytes
+ edu/colostate/cs414c/documents/paybycard.png  | Bin 0 -> 521374 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 50546ccf33e482928e7cb746e1d7784abed6f672
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Mon Oct 27 17:57:10 2014 -0600
+
+    paviragh-menu
+
+ .../cs414c/controller/CashierController.java       |  56 ++++++
+ .../cs414c/controller/DefineMenuController.java    | 153 ++++++++++++++
+ .../cs414c/controller/ManagerController.java       |  76 +++++++
+ .../cs414c/controller/MenuController.java          |  46 +++--
+ .../cs414c/controller/TakeOrderController.java     |  58 ++++++
+ edu/colostate/cs414c/model/Manager.java            |  22 +++
+ edu/colostate/cs414c/view/CashierView.java         |  86 ++++++++
+ edu/colostate/cs414c/view/DefineMenuView.java      | 220 +++++++++++++++++++++
+ edu/colostate/cs414c/view/ManagerView.java         | 121 ++++++++++++
+ edu/colostate/cs414c/view/MenuView.java            |  57 +++---
+ edu/colostate/cs414c/view/SaleLineItem.java        | 135 +++++++++++++
+ 11 files changed, 985 insertions(+), 45 deletions(-)
+
+commit 10688917171caabd331bf49d5352f9168c327e0a
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Mon Oct 27 17:52:26 2014 -0600
+
+    leo-db
+
+ DbConnection.java | 163 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 163 insertions(+)
+
+commit 8a0ba0ee701cfd9a59ca9bcf0ddd82e31a6588ae
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Mon Oct 27 17:47:02 2014 -0600
+
+    leo-selectmenu
+
+ edu/colostate/cs414c/view/SelectMenuView.java | 281 ++++++++++++++++++++++++++
+ 1 file changed, 281 insertions(+)
+
+commit 3569daf36be112a73ef04b5c016c8b2882ef260a
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Sat Oct 25 16:05:03 2014 -0600
+
+    Leo Model
+
+ edu/colostate/cs414c/model/Admin.java      |  10 +++
+ edu/colostate/cs414c/model/Cashier.java    |   8 +++
+ edu/colostate/cs414c/model/Chef.java       |  10 +++
+ edu/colostate/cs414c/model/Customer.java   |  19 +++++
+ edu/colostate/cs414c/model/Employee.java   |  42 +++++++++++
+ edu/colostate/cs414c/model/Item.java       |  23 +++++-
+ edu/colostate/cs414c/model/Login.java      |  13 ++--
+ edu/colostate/cs414c/model/Order.java      |   5 ++
+ edu/colostate/cs414c/model/Pizza.java      | 111 +++++++----------------------
+ edu/colostate/cs414c/model/PizzaStore.java |   8 +--
+ edu/colostate/cs414c/model/Register.java   |   5 ++
+ edu/colostate/cs414c/model/Toppings.java   |  17 +++++
+ edu/colostate/cs414c/model/User.java       |  51 +++++++++++++
+ 13 files changed, 222 insertions(+), 100 deletions(-)
+
+commit 3625e21fe1a595bd79a07c23780acd08e27f6968
+Author: leovignesh <leovignesh@gmail.com>
+Date:   Sat Oct 25 16:03:00 2014 -0600
+
+    leo-selectmenu
+
+ .../cs414c/controller/SelectMenuController.java    | 48 ++++++++++++++++++++++
+ 1 file changed, 48 insertions(+)
+
+commit d514df54783bc84e149e85eb62fab78c7d35e254
+Merge: f36cc6c b1200f0
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Sat Oct 25 15:54:36 2014 -0600
+
+    Merge branch 'master' of https://github.com/csu-cs414c/cs414c
+
+commit f36cc6c091d406e48a1bca61a3103a084342d4ed
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Sat Oct 25 15:52:50 2014 -0600
+
+    commit package
+
+ .../cs414c/controller/LoginController.java         |  61 +++++++++
+ .../cs414c/controller/MenuController.java          |  74 +++++++++++
+ edu/colostate/cs414c/model/AddOns.java             |  55 ++++++++
+ edu/colostate/cs414c/model/Drinks.java             |  63 ++++++++++
+ edu/colostate/cs414c/model/EmployeeDetails.java    |  73 +++++++++++
+ edu/colostate/cs414c/model/Item.java               |  59 +++++++++
+ edu/colostate/cs414c/model/Login.java              |  25 ++++
+ edu/colostate/cs414c/model/Pizza.java              |  92 ++++++++++++++
+ edu/colostate/cs414c/model/PizzaStore.java         |  92 ++++++++++++++
+ edu/colostate/cs414c/model/Topping.java            |  50 ++++++++
+ edu/colostate/cs414c/view/LoginView.java           |  79 ++++++++++++
+ edu/colostate/cs414c/view/MenuView.java            | 139 +++++++++++++++++++++
+ 12 files changed, 862 insertions(+)
+
+commit b1200f076bfe839fb952842c63eac9c935fe2804
+Author: prabhugce <prabhugce@gmail.com>
+Date:   Sat Oct 25 15:18:48 2014 -0600
+
+    payment-prabhu
+
+ CashPayment.java           | 20 ++++++++++++++++
+ CreditPayment.java         | 40 +++++++++++++++++++++++++++++++
+ GuiCardPayment.java        |  4 ++++
+ GuiCashPayment.java        | 41 +++++++++++++++++++++++++++++++
+ GuiPayment.java            | 60 ++++++++++++++++++++++++++++++++++++++++++++++
+ Payment.java               | 23 ++++++++++++++++++
+ PaymentButtonListener.java | 58 ++++++++++++++++++++++++++++++++++++++++++++
+ 7 files changed, 246 insertions(+)
+
+commit 2a4ffba139b640438a048a4fe64d48e83607a8c3
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Sat Oct 25 12:15:13 2014 -0600
+
+    menu-paviragh
+
+ AddOns.java  | 48 +++++++++++++++++++++++++++++++
+ Drinks.java  | 58 +++++++++++++++++++++++++++++++++++++
+ Item.java    | 57 +++++++++++++++++++++++++++++++++++++
+ Pizza.java   | 93 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Topping.java | 43 ++++++++++++++++++++++++++++
+ 5 files changed, 299 insertions(+)
+
+commit 777c2d72fd48b7d5bbed249717ead16f0f815bef
+Author: paviragh <paviragh@rams.colostate.edu>
+Date:   Fri Oct 24 18:20:41 2014 -0600
+
+    login-paviragh
+
+ LoginController.java | 59 ++++++++++++++++++++++++++++++++++++++++
+ LoginView.java       | 77 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 136 insertions(+)
