@@ -9,13 +9,54 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class CardDetailsActivity extends Activity {
 
+	EditText cardNumber;
+	EditText name;
+	EditText cvv;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_card_details);
+		Button next = (Button)findViewById(R.id.button25);
+		cardNumber = (EditText) findViewById(R.id.editText25);
+		name = (EditText) findViewById(R.id.editText26);
+		cvv = (EditText) findViewById(R.id.editText27);
+		
+		next.setOnClickListener(
+				new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						if(!cardNumber.getText().toString().equals("")){
+							if(cardNumber.getText().length()!=16){
+								cardNumber.setError("Please enter proper card number");
+							}
+							if(!name.getText().toString().equals("")){
+								if(!cvv.getText().toString().equals("")){
+									if(cvv.getText().length()!=3){
+										cvv.setError("Please enter proper CVV");
+									}
+									// Payment Final Screen
+									
+								}else{
+									cvv.setError("Please enter CVV");
+								}
+							}else{
+								name.setError("Please enter Name");
+							}
+						}else{
+							cardNumber.setError("Card Number Mandatory");
+						}
+						
+					}
+				});
+		
 	}
 
 	@Override

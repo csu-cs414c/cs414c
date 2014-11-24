@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.colostate.cs.cs414c.Activity.PaymentActivity" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="59dp" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="238dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="payByCardOnClick"
+            android:text="@string/pay_by_card" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            style="@style/AppBaseTheme"
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_during_delivery" />
+    </RadioGroup>
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:layout_marginBottom="36dp"
+        android:onClick="paymentNextClick"
+        android:text="@string/next" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_marginLeft="16dp"
+        android:text="@string/cancel" />
+
+</RelativeLayout>
