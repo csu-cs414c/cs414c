@@ -51,6 +51,11 @@ public class DeliveryAddressActivity extends Activity {
 		t1.setText(CustomerUI.points);
 		
 	}
+	
+	public void changeAddressButtonClick(View view){
+		Intent intent = new Intent(this,AlternateDeliveryActivity.class);
+		startActivity(intent);
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
